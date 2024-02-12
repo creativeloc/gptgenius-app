@@ -1,6 +1,7 @@
 "use client"
-import { useState } from "react"
+
 import { BsMoonFill, BsSunFill } from "react-icons/bs"
+import { useState } from "react"
 
 const themes = {
   winter: "winter",
@@ -10,7 +11,7 @@ const themes = {
 const ThemeToggle = () => {
   const [theme, setTheme] = useState(themes.winter)
 
-  const toggleTheme = (theme) => {
+  const toggleTheme = () => {
     const newTheme = theme === themes.winter ? themes.dracula : themes.winter
     document.documentElement.setAttribute("data-theme", newTheme)
     setTheme(newTheme)
